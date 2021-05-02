@@ -1,0 +1,16 @@
+{
+  "name": "evilgazz/solid_principles",
+  "authors": [
+    {
+      "name": "olegopro",
+      "email": "evilgazz@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/Classes"
+    }
+  },
+  "description": "SOLID PRINCIPLES"
+}
