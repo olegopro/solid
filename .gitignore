@@ -1,7 +1,7 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/vscode,phpstorm+all,node,composer,sublimetext,macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=vscode,phpstorm+all,node,composer,sublimetext,macos,windows
-
+*.txt
 ### Composer ###
 composer.phar
 /vendor/
