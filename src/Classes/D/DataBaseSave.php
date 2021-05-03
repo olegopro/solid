@@ -4,7 +4,6 @@
 namespace App\D;
 
 
-use App\Saver;
 use mysqli;
 
 class DataBaseSave implements Saver
@@ -17,7 +16,7 @@ class DataBaseSave implements Saver
         $this->host = $host;
         $this->user = $user;
         $this->pass = $pass;
-        $this->db   = $db;
+        $this->db = $db;
     }
 
     public function connect()
