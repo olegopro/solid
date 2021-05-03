@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\O;
+namespace App\D;
 
 class Report
 {
