@@ -1,15 +1,19 @@
 <?php
 
-use App\O\DataBaseSave;
-use App\O\FileSave;
-use App\O\Report;
-use App\O\ReportRepository;
 
 require '../vendor/autoload.php';
 
-$report = new Report();
+
+//DEPENDENCY INVERSION PRINCIPLE
+
+use App\D\DataBaseSave;
+use App\D\FileSave;
+use App\D\Report;
+use App\D\ReportRepository;
+
+$report = new Report(new \App\D\View());
 $report->renderReport();
 
-$repository = new ReportRepository($report, new FileSave('file.txt'));
-$repository = new ReportRepository($report, new DataBaseSave('localhost', 'root', '', 'demo'));
+$repository = new ReportRepository($report, new FileSave('fileD.txt'));
+//$repository = new ReportRepository($report, new DataBaseSave('localhost', 'root', '', 'demo'));
 $repository->save();

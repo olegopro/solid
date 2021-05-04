@@ -3,8 +3,25 @@
 
 namespace App\D;
 
-class Report
+class Report implements IReport
 {
+    private $view;
+
+    public function __construct(View $view)
+    {
+        $this->view = $view;
+    }
+
+    public function getView(): View
+    {
+        return $this->view;
+    }
+
+    public function setView(View $view): void
+    {
+        $this->view = $view;
+    }
+
     public function getDoctor()
     {
         return 'Doctor';
@@ -20,8 +37,8 @@ class Report
         return 'Data';
     }
 
-    public function renderReport()
+    public function renderReport(): string
     {
-        return $this->getDoctor() . '<br>' . $this->getpatient() . '<br>' . $this->getData();
+        return $this->getView()->render($this->getDoctor(), $this->getPatient(), $this->getData());
     }
 }
