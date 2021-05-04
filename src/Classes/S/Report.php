@@ -24,11 +24,6 @@ class Report
         echo $this->getDoctor() . '<br>' . $this->getpatient() . '<br>' . $this->getData();
     }
 
-    /*public function save()
-    {
-        $filename = 'report' . $this->getDoctor() . ' - ' . $this->getPatient() . '.txt';
-        file_put_contents($filename, $this->renderReport());
-    }*/
 
     public function export()
     {
