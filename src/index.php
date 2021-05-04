@@ -1,11 +1,12 @@
 <?php
 
 
-use App\I\G\TestController;
-
 require_once '../vendor/autoload.php';
 
+use App\I\G\Order;
+use App\I\G\QuickOrder;
+use App\I\G\TestController;
 
-$quickOrder = new \App\I\G\QuickOrder();
-$order = new \App\I\G\Order();
+$quickOrder = new QuickOrder();
+$order = new Order();
 $textController = new TestController($order);
