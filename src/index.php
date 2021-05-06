@@ -4,6 +4,8 @@
 require_once '../vendor/autoload.php';
 
 
+
+
 //SINGLE RESPONSIBILITY
 /*use App\S\HtmlTemplate;
 use App\S\PhpTemplate;
@@ -63,3 +65,11 @@ $layout->addViews(
 
 echo $layout->render();*/
 
+//INTERFACE SEGREGATION
+/*use App\I\G\Order;
+use App\I\G\QuickOrder;
+use App\I\G\TestController;
+
+$quickOrder = new QuickOrder();
+$order = new Order();
+$textController = new TestController($order);*/
