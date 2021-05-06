@@ -4,8 +4,6 @@
 require_once '../vendor/autoload.php';
 
 
-
-
 //SINGLE RESPONSIBILITY
 /*use App\S\HtmlTemplate;
 use App\S\PhpTemplate;
@@ -15,6 +13,7 @@ $report = new Report();
 $template = new HtmlTemplate();
 
 $template->render($report->renderReport());*/
+
 
 //OPEN CLOSED
 /*use App\O\DataBaseSave;
@@ -28,6 +27,7 @@ $report->renderReport();
 $repository = new ReportRepository($report, new FileSave('file.txt'));
 //$repository = new ReportRepository($report, new DataBaseSave('localhost', 'root', '', 'demo'));
 $repository->save()*/;
+
 
 //LISKOV SUBSTITUTION
 /*use App\L\Example\CompositeView;
@@ -65,6 +65,7 @@ $layout->addViews(
 
 echo $layout->render();*/
 
+
 //INTERFACE SEGREGATION
 /*use App\I\G\Order;
 use App\I\G\QuickOrder;
@@ -73,3 +74,17 @@ use App\I\G\TestController;
 $quickOrder = new QuickOrder();
 $order = new Order();
 $textController = new TestController($order);*/
+
+
+//DEPENDENCY INVERSION PRINCIPLE
+/*use App\D\DataBaseSave;
+use App\D\FileSave;
+use App\D\Report;
+use App\D\ReportRepository;
+
+$report = new Report(new \App\D\View());
+$report->renderReport();
+
+$repository = new ReportRepository($report, new FileSave('fileD.txt'));
+//$repository = new ReportRepository($report, new DataBaseSave('localhost', 'root', '', 'demo'));
+$repository->save();*/
